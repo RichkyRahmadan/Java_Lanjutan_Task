@@ -102,7 +102,7 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    @Scheduled(cron = "0 40 21 * * ?")
+    @Scheduled(cron = "0 0 6 * * ?")
     public void sendEmailAllItemScheduling() throws Exception {
         sendEmailAllItem();
         System.out.println("Daily Mail Has Been Sent");
