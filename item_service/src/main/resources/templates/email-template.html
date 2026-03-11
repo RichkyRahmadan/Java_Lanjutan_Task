@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        .table-style { width: 100%; border-collapse: collapse; font-family: sans-serif; }
+        .table-style th { background-color: #4CAF50; color: white; padding: 10px; }
+        .table-style td { border: 1px solid #ddd; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h2 th:text="${judulEmail}">Judul Default</h2>
+    <table class="table-style">
+        <thead>
+            <tr>
+                <th>Id Item</th>
+                <th>Name Item</th>
+                <th>Stock Item</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="produk : ${listProduk}">
+                <td th:text="${produk.idItem}">Id</td>
+                <td th:text="${produk.nameItem}">Nama</td>
+                <td th:text="${produk.stokItem}">Stock</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
